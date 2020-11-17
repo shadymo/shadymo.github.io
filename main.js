@@ -2,7 +2,6 @@ const songs = [ 'aston.mp3', 'connections.mp3', 'high.m4a', 'mfeature.mp3', 'Tac
 
 
 const music = document.getElementById('music');
-
 let counter = 0;
 
 
@@ -10,7 +9,7 @@ let counter = 0;
 
 function play(song){
     if(song){
-        music.src = `./songs/${song}-`
+        music.src = `./songs/${song}`
     }else{
         music.src = `./songs/${songs[counter]}`;
     }
@@ -18,6 +17,7 @@ function play(song){
     music.onended = function(){
         nextSong();
     }
+    document.getElementById('current-song').innerText = convertSongName(songs[counter]);
 }
 
 function nextSong(){
@@ -34,6 +34,7 @@ function createSongElements(){
     songs.forEach(song =>{
         let p = document.createElement('p');
         p.innerText = convertSongName(song);
+        p.classList.add('songName')
         songHolder.appendChild(p)
         
     })
@@ -55,16 +56,29 @@ function convertSongName(path){
 
 
 document.addEventListener('click', (e)=>{
-    let target = e.target.id;
-
-    if(target == 'start'){
+    let target = e.target;
+    
+    if(target.id == 'start'){
         document.getElementById('start').style.display = 'none';
         document.getElementById('music-player').style.display = 'flex'
         play();
-        createSongElements();
+        //createSongElements();
     }
-    if(target == 'next'){
+    if(target.id == 'next'){
         nextSong();
     }
+    /*
+    if(target.classList[0] == 'songName'){
+        let songPath = ''
+        if(target.innerText == 'high'){
+            songPath = 'high' + '.m4a';
+        }else{
+            songPath = target.innerText + ".mp4"
+        }
+       
+        play(songPath)
+        
+    }
+    */
 })
 
