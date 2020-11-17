@@ -1,0 +1,10 @@
+#app{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#music-player{
+    display: none;
+    justify-content: column;
+}
