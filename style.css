@@ -1,4 +1,11 @@
 body{margin:0; padding: 0}
+header{
+    position: absolute;
+    text-align: left;
+    top:2vh;
+    left: 5vw;
+    
+}
 #app{
     border: 3px solid black;
     width:90vw;
@@ -7,7 +14,7 @@ body{margin:0; padding: 0}
     display:flex;
     justify-content: center;
     align-items: center;
-    flex-direction: row;
+    flex-direction: column;
 }
 #music-player{
     margin: 5em;

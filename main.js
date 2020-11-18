@@ -63,7 +63,7 @@ document.addEventListener('click', (e)=>{
     let target = e.target;
     
     if(target.id == 'start'){
-        document.getElementById('start').style.display = 'none';
+        document.getElementById('start').remove()
         document.getElementById('music-player').style.display = 'flex';
         createSongElements();
         play();
