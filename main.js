@@ -10,14 +10,17 @@ let counter = 0;
 function play(song){
     if(song){
         music.src = `./songs/${song}`
+        document.getElementById('current-song').innerText = convertSongName(song);
+
     }else{
         music.src = `./songs/${songs[counter]}`;
+        document.getElementById('current-song').innerText = convertSongName(songs[counter]);
+
     }
     music.play();
     music.onended = function(){
         nextSong();
     }
-    document.getElementById('current-song').innerText = convertSongName(songs[counter]);
 }
 
 function nextSong(){
@@ -50,9 +53,10 @@ function convertSongName(path){
         return word;
     }
  }
- console.log(word)
+ 
     return word;
 }
+
 
 
 document.addEventListener('click', (e)=>{
@@ -60,25 +64,25 @@ document.addEventListener('click', (e)=>{
     
     if(target.id == 'start'){
         document.getElementById('start').style.display = 'none';
-        document.getElementById('music-player').style.display = 'flex'
+        document.getElementById('music-player').style.display = 'flex';
+        createSongElements();
         play();
-        //createSongElements();
     }
     if(target.id == 'next'){
         nextSong();
     }
-    /*
+    
     if(target.classList[0] == 'songName'){
         let songPath = ''
         if(target.innerText == 'high'){
-            songPath = 'high' + '.m4a';
+            songPath = target.innerText + '.m4a';
         }else{
-            songPath = target.innerText + ".mp4"
+            songPath = target.innerText + '.mp3'
         }
-       
+       console.log(songPath);
         play(songPath)
         
     }
-    */
+    
 })
 
