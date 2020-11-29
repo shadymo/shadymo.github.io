@@ -4,7 +4,7 @@ header{
     text-align: left;
     top:2vh;
     left: 5vw;
-    
+
 }
 #app{
     border: 3px solid black;
@@ -14,11 +14,24 @@ header{
     display:flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+    flex-direction: row;
 }
 #music-player{
     margin: 5em;
     display: none;
     flex-direction: column;
     align-items: center;
+}
+#song-holder{
+  max-height: 55vh;
+  overflow:hidden;
+   overflow-y:scroll;
+}
+
+
+
+@media only screen and (max-device-width: 480px) {
+  #app{
+    flex-direction: column;
+  }
 }
