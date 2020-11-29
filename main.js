@@ -1,5 +1,5 @@
-const songs = ['80Way.mp3', '2020 Vision.mp3', 'Aston.mp3', 'Connections.mp3',
-              'Flamingo.mp3', 'Go Get It.mp3', 'High.m4a', 'HitList.mp3',
+const songs = ['80Way.mp3', '2020 Vision.mp3', 'aston.mp3', 'connections.mp3',
+              'Flamingo.mp3', 'Go Get It.mp3', 'high.m4a', 'HitList.mp3',
               'Level Up.mp3', 'mfeature.mp3', 'No Hook Part 2.mp3', 'Pop A Ten.mp3',
               'Tactical.mp3', 'Talk To Em.mp3', 'Tired of this Shit.mp3', 'We Dont Do Baccardi.mp3'];
 
