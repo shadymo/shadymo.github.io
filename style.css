@@ -27,12 +27,23 @@ header{
   overflow:hidden;
    overflow-y:scroll;
 }
+#music-player button{
+  font-size: 14px;
+  border: none;
+  color:white;
+  background-color: red;
+  border: none;
+  padding: 3px;
+}
 
 
 
 @media only screen and (max-device-width: 375px) {
   #app{
     flex-direction: column;
+  }
+  #song-holder{
     max-height: 45vh;
   }
+
 }
