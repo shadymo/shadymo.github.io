@@ -30,8 +30,9 @@ header{
 
 
 
-@media only screen and (max-device-width: 480px) {
+@media only screen and (max-device-width: 375px) {
   #app{
     flex-direction: column;
+    max-height: 45vh;
   }
 }
