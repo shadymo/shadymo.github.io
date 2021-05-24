@@ -9,6 +9,9 @@ header{
 .song-name{
   color:white
 }
+#start{
+  color:white;
+}
 #app{
     border: 3px solid black;
     width:98vw;
