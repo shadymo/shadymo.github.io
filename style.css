@@ -1,4 +1,4 @@
-body{margin:0; padding: 0}
+body{margin:0; padding: 0; background-color: black; color: white;}
 header{
     position: absolute;
     text-align: left;
@@ -6,15 +6,21 @@ header{
     left: 5vw;
 
 }
+.song-name{
+  color:white
+}
 #app{
     border: 3px solid black;
-    width:90vw;
-    height:90vh;
-    margin: 4vw;
+    width:98vw;
+    height:98vh;
+    margin: 1vw;
     display:flex;
     justify-content: center;
     align-items: center;
     flex-direction: row;
+    background-image: url('./pic/BG.png');
+    background-attachment: fixed;
+    background-size: cover ;
 }
 #music-player{
     margin: 5em;

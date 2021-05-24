@@ -1,18 +1,28 @@
-const songs = ['80Way.mp3', '2020 Vision.mp3', 'aston.mp3', 'connections.mp3',
+//Array of song names from the folder 'songs'
+
+const songs = ['80Way.mp3', '2020 Vision.mp3', 'aston.mp3', 'Bug Out.mp3', 'connections.mp3',
               'Flamingo.mp3', 'Go Get It.mp3', 'high.m4a', 'HitList.mp3',
-              'Level Up.mp3', 'mfeature.mp3', 'No Hook Part 2.mp3', 'Pop A Ten.mp3',
-              'Tactical.mp3', 'Talk To Em.mp3', 'Tired of this Shit.mp3', 'We Dont Do Baccardi.mp3'];
+              'Level Up.mp3', 'Long Gone.mp3', 'mfeature.mp3', 'MPR.mp3', 'No Hook Part 2.mp3', 
+              'Pop A Ten.mp3','Tactical.mp3', 'Talk To Em.mp3', 'Tired of this Shit.mp3', 
+              'Trappin For Ks.mp3', 'We Dont Do Baccardi.mp3'];
 
+//Global Variables
 
+//get the audio html element
 const music = document.getElementById('music');
+//a counter to cycle thru all the songs
 let counter = 0;
+//Determine whether or not shuffle is on, always starts on off
 let isShuffleOn = false;
 
 
 
+//Function Declarations
 
+//play the selected song
 function play(song){
     if(song){
+        //
         music.src = `./songs/${song}`
         document.getElementById('current-song').innerText = convertSongName(song);
         getCounterFromSong(song)
@@ -51,7 +61,7 @@ function createSongElements(){
     songs.forEach(song =>{
         let p = document.createElement('p');
         p.innerText = convertSongName(song);
-        p.classList.add('songName')
+        p.classList.add('song-name')
         songHolder.appendChild(p)
     })
 }
@@ -96,7 +106,7 @@ document.addEventListener('click', (e)=>{
       nextSong();
     }
 
-    if(target.classList[0] == 'songName'){
+    if(target.classList[0] == 'song-name'){
         let songPath = ''
         if(target.innerText == 'high'){
             songPath = target.innerText + '.m4a';
